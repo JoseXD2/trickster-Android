@@ -48,7 +48,6 @@ class TitleState extends MusicBeatState
 		#if windows
 		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#else
-		
 		if (!sys.FileSystem.exists(Sys.getCwd() + "\\assets\\replays"))
 			sys.FileSystem.createDirectory(Sys.getCwd() + "\\assets\\replays");
 		#end
