@@ -44,7 +44,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		bf.animation.resume();
 		
 		#if android
-		addVirtualPàd(NONE, A_B);
+		addVirtualPad(NONE, A_B);
 		#end
 	}
 
