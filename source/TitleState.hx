@@ -45,12 +45,6 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-		#if windows
-		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
-		#else
-		if (!sys.FileSystem.exists(Sys.getCwd() + "\\assets\\replays"))
-			sys.FileSystem.createDirectory(Sys.getCwd() + "\\assets\\replays");
-		#end
 
 		if (FlxG.save.data.newInput == null)
 			FlxG.save.data.newInput = false;
