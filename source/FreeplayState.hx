@@ -47,8 +47,8 @@ class FreeplayState extends MusicBeatState
 		songFour = new TrickyButton(300,420,'menu/freeplay/Expurgation Button','menu/freeplay/Expurgation Confirm',selectSong, 'expurgation', 0, 15);
 
 		songFour.spriteOne = new FlxSprite(songFour.trueX + songFour.tweenX, songFour.trueY + songFour.tweenY).loadGraphic(Paths.image('menu/freeplay/Expurgation Button',"clown"), true, 800, 200);
-        songFour.spriteTwo = new FlxSprite(songFour.trueX + songFour.tweenX, songFour.trueY + songFour.tweenY).loadGraphic(Paths.image('menu/freeplay/Expurgation Confirm',"clown"), true, 800, 200);
-        songFour.spriteTwo.alpha = 0;
+                songFour.spriteTwo = new FlxSprite(songFour.trueX + songFour.tweenX, songFour.trueY + songFour.tweenY).loadGraphic(Paths.image('menu/freeplay/Expurgation Confirm',"clown"), true, 800, 200);
+                songFour.spriteTwo.alpha = 0;
 		songFour.spriteOne.animation.add("static", [0, 1, 2, 3], 12, true);
 		songFour.spriteTwo.animation.add("static", [0, 1, 2, 3], 12, true);
 		songFour.spriteOne.animation.play("static");
@@ -105,7 +105,10 @@ class FreeplayState extends MusicBeatState
 		add(menuShade);
 
 		songs[0].highlight();
-
+		
+                #if android
+		addVirtualPad(FULL, A_B);
+		#end
 	}
 
 	function diffGet()
