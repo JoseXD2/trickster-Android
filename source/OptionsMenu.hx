@@ -21,16 +21,17 @@ class OptionsMenu extends MusicBeatState
 
 	var options:Array<OptionCatagory> = [
 		new OptionCatagory("Gameplay", [
+			new AndroidControls(),
 			new DFJKOption(controls),
 			new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
-			#if desktop
+			#if (desktop && android)
 			new FPSCapOption("Cap your FPS (Left for -10, Right for +10. SHIFT to go faster)"),
 			#end
 			new ScrollSpeedOption("Change your scroll speed (Left for -0.1, right for +0.1. If it's at 1, it will be chart dependent)"),
 			new AccuracyDOption("Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)"),
 		]),
 		new OptionCatagory("Appearance", [
-			#if desktop
+			#if (desktop && android)
 			new AccuracyOption("Display accuracy information."),
 			new NPSDisplayOption("Shows your current Notes Per Second."),
 			new SongPositionOption("Show the songs current position (as a bar)"),
@@ -104,6 +105,10 @@ class OptionsMenu extends MusicBeatState
 		menuShade.setGraphicSize(Std.int(menuShade.width * 0.7));
 		add(menuShade);
 
+		#if android
+addVirtualPad (UP_DOWN, A_B);
+#end
+	
 		super.create();
 	}
 
@@ -157,9 +162,9 @@ class OptionsMenu extends MusicBeatState
 				curSelected = 0;
 				currentOptions[curSelected].color = FlxColor.WHITE;
 			}
-			if (FlxG.keys.justPressed.UP)
+			if (controls.UP_P)
 				changeSelection(-1);
-			if (FlxG.keys.justPressed.DOWN)
+			if (controls.DOWN_P)
 				changeSelection(1);
 			
 			if (isCat)
