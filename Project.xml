@@ -91,7 +91,7 @@
 	<haxelib name="flixel-ui" />
 	<haxelib name="actuate" />
 	<haxelib name="newgrounds"/>
-	<haxelib name="extension-webm" if="desktop"/>
+	<haxelib name="extension-webm"/>
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
 	<!-- <haxelib name="hxcpp-debug-server" if="desktop"/> -->
