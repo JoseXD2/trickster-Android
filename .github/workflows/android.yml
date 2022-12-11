@@ -50,6 +50,8 @@ jobs:
           haxelib install lime 7.9.0
           haxelib install hxCodec
           haxelib install openfl 9.1.0
+          haxelib set newgrounds 1.3.0
+          haxelib install newgrounds 1.3.0
           haxelib --never install flixel 4.11.0
           haxelib run lime setup flixel
           haxelib install flixel-tools
