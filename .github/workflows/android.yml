@@ -58,7 +58,7 @@ jobs:
           haxelib install flixel-ui
           haxelib install hscript
           haxelib install flixel-addons
-          haxelib git install https://github.com/Sirox228/extension-webm
+          haxelib git install extension-webm https://github.com/Sirox228/extension-webm
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib list
 
