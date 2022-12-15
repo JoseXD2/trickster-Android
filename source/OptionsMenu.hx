@@ -63,6 +63,8 @@ class OptionsMenu extends MusicBeatState
 
 	override function create()
 	{
+		Main.dumpCache();
+		
 		var bg:FlxSprite = new FlxSprite(-10,-10).loadGraphic(Paths.image('menu/freeplay/RedBG','clown'));
 		add(bg);
 		var hedge:FlxSprite = new FlxSprite(-810,-335).loadGraphic(Paths.image('menu/freeplay/hedge','clown'));
