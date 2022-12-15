@@ -53,7 +53,8 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-
+                Main.dumpCache();
+		
 		instance = this;
 
 		if (FlxG.save.data.beatenHard)
