@@ -31,6 +31,8 @@ class FreeplayState extends MusicBeatState
 	public static var diffText:AlphabetTricky;
 
 	override function create() {
+		
+		Main.dumpCache();
 
 		trace(diff);
 	
