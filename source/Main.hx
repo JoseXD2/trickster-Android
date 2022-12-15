@@ -94,7 +94,7 @@ class Main extends Sprite
 
 		var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
         
-        #if windows
+        #if web
         var str1:String = "HTML CRAP";
         var vHandler = new VideoHandler();
         vHandler.init1();
